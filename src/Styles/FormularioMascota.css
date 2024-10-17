@@ -1,0 +1,12 @@
+.mascotas-container {
+    display: flex;
+    flex-wrap: wrap; /* Para que las imágenes puedan ir a la siguiente línea si es necesario */
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+}
+
+.img-mascota {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+}
