@@ -61,14 +61,15 @@ const FormularioMascotas = () => {
             <div className="mascotas-container">
                 {mascotasFiltradas.length > 0 ? (
                     mascotasFiltradas.map((mascota) => (
-                        <div key={mascota.id}>
+                        <div key={mascota.id} className="mascota-card">
                             <ul>
-                                <li>Nombre: {mascota.nombre}</li>
-                                <li>Edad: {mascota.edad}</li>
-                                <li>Tipo: {mascota.tipo}</li>
-                                <li>Genero: {mascota.genero}</li>
                                 <img src={mascota.imagen} alt={mascota.nombre} className="img-mascota" />
-                                <p></p>
+                                <p>Nombre: {mascota.nombre}</p>
+                                <p>Edad: {mascota.edad}</p>
+                                <p>Genero: {mascota.genero}</p>
+                                <div dangerouslySetInnerHTML={{ __html: mascota.desc_fisica }}></div>
+                                <div dangerouslySetInnerHTML={{ __html: mascota.desc_personalidad}}></div>
+                                <div dangerouslySetInnerHTML={{ __html: mascota.desc_adicional }}></div>
                                 <button onClick={() => navigate('/Formulario')}>Adoptar</button>
                             </ul>
                         </div>

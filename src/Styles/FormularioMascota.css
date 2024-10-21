@@ -1,12 +1,59 @@
 .mascotas-container {
     display: flex;
-    flex-wrap: wrap; /* Para que las imágenes puedan ir a la siguiente línea si es necesario */
-    gap: 20px; /* Espacio entre las imágenes */
-    justify-content: center; /* Centra las imágenes horizontalmente */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start; /* Alineación en la parte superior para mantener uniformidad */
+    padding: 20px;
+}
+
+.mascota-card {
+    background-color: rgba(255, 255, 255, 0.7); /* Opacidad solo al color de fondo */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    max-height: 400px; /* Establecer una altura máxima para las tarjetas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mascota-card p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.mascota-card ul {
+    max-height: 250px; /* Limitar la altura del contenido principal */
+    overflow-y: auto; /* Habilitar el desplazamiento vertical si el contenido es demasiado largo */
+    margin-bottom: 10px;
 }
 
 .img-mascota {
-    max-width: 200px;
-    max-height: 200px;
-    object-fit: cover;
+    max-width: 100%; /* Asegúrate de que la imagen no desborde el contenedor */
+    height: auto; /* Mantén la proporción de la imagen */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.Mascotas {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+body {
+    background-color: lightblue;
+}
+
+label
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px;
 }

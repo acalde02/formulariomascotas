@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../Styles/RellenaFormulario.css";
 
 const RellenaFormulario = () => {
     const [nombreMascota, setNombreMascota] = useState("");
